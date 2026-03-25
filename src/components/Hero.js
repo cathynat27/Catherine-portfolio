@@ -39,11 +39,11 @@ const Hero = () => {
               className="mb-8"
             >
               <div className="relative">
-                <div className="w-32 h-80 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary-200 dark:border-primary-800 shadow-xl">
+                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary-200 dark:border-primary-800 shadow-xl">
                   <img
                     src="/passport.jpeg"
                     alt="Catherine Natukunda"
-                    className="w-full h-full object-cobtain"
+                    className="w-full h-full object-cover object-top"
                     onError={(e) => {
                       e.target.src = `data:image/svg+xml;base64,${btoa(`
                         <svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
