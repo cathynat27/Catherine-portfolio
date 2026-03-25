@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, Heart } from 'lucide-react';
+import { Mail, Github, Linkedin } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 const Contact = () => {
@@ -19,7 +19,7 @@ const Contact = () => {
       // href: personal.github,
       value: personal.github
     },
-    
+
     {
       icon: Linkedin,
       label: 'LinkedIn',
@@ -83,29 +83,29 @@ const Contact = () => {
                   {link.label}
                 </h3>
                 <div className="flex flex-col gap-1">
-                {Array.isArray(link.value) ? (
-                  link.value.map((item, i) => (
+                  {Array.isArray(link.value) ? (
+                    link.value.map((item, i) => (
+                      <a
+                        key={i}
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-primary-600 dark:text-primary-400 hover:underline break-all"
+                      >
+                        {item.name}
+                      </a>
+                    ))
+                  ) : (
                     <a
-                      key={i}
-                      href={item.url}
+                      href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-primary-600 dark:text-primary-400 hover:underline break-all"
+                      className="text-gray-600 dark:text-gray-300 text-sm break-words"
                     >
-                      {item.name}
+                      {link.value}
                     </a>
-                  ))
-                ) : (
-                  <a
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-600 dark:text-gray-300 text-sm break-words"
-                  >
-                    {link.value}
-                  </a>
-                )}
-              </div>
+                  )}
+                </div>
               </motion.a>
             );
           })}
