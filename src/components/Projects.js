@@ -13,12 +13,12 @@ const Projects = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-16"
+          className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 sm:mb-12 md:mb-16"
         >
           Featured Projects
         </motion.h2>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -26,28 +26,27 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 sm:p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow"
             >
-              <div className="flex justify-between items-start mb-4">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+              <div className="mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-2">
                   {project.title}
                 </h3>
-                
               </div>
 
-              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed">
                 {project.description}
               </p>
 
-              <div className="mb-6">
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-3">
+              <div className="mb-4 sm:mb-6">
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2 sm:mb-3 text-sm sm:text-base">
                   Technologies Used:
                 </h4>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1 sm:gap-2">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-sm"
+                      className="px-2 py-1 sm:px-3 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-xs sm:text-sm"
                     >
                       {tech}
                     </span>
@@ -55,13 +54,13 @@ const Projects = () => {
                 </div>
               </div>
 
-              <div className="mb-6">
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-3">
+              <div className="mb-4 sm:mb-6">
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2 sm:mb-3 text-sm sm:text-base">
                   Key Contributions:
                 </h4>
-                <ul className="space-y-2">
+                <ul className="space-y-1 sm:space-y-2">
                   {project.contributions.map((contribution, idx) => (
-                    <li key={idx} className="text-gray-600 dark:text-gray-300 flex items-start">
+                    <li key={idx} className="text-sm sm:text-base text-gray-600 dark:text-gray-300 flex items-start">
                       <span className="text-primary-600 dark:text-primary-400 mr-2">•</span>
                       {contribution}
                     </li>
@@ -69,11 +68,11 @@ const Projects = () => {
                 </ul>
               </div>
 
-              <div className="border-t border-gray-200 dark:border-gray-700 pt-4">
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+              <div className="border-t border-gray-200 dark:border-gray-700 pt-3 sm:pt-4">
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm sm:text-base">
                   Impact:
                 </h4>
-                <p className="text-primary-600 dark:text-primary-400 font-medium">
+                <p className="text-primary-600 dark:text-primary-400 font-medium text-sm sm:text-base">
                   {project.impact}
                 </p>
               </div>

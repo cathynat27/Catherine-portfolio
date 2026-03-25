@@ -22,8 +22,8 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-[85vh] flex items-center justify-center bg-gradient-to-br from-primary-50 to-white dark:from-gray-900 dark:to-gray-800 pt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-white dark:from-gray-900 dark:to-gray-800 pt-20 pb-10 px-4">
+      <div className="max-w-7xl mx-auto w-full text-center">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -60,30 +60,30 @@ const Hero = () => {
               </div>
             </motion.div>
 
-            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-4 text-center">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 dark:text-white mb-4 text-center leading-tight px-2">
               {personal.name}
             </h1>
-            <h2 className="text-2xl md:text-3xl text-primary-600 dark:text-primary-400 font-medium mb-6 text-center">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-primary-600 dark:text-primary-400 font-medium mb-6 text-center px-2">
               {personal.title}
             </h2>
           </motion.div>
 
           <motion.p
             variants={itemVariants}
-            className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed px-4"
           >
             {personal.tagline}
           </motion.p>
 
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8"
+            className="flex flex-col gap-3 justify-center items-stretch pt-8 px-4 max-w-sm mx-auto sm:max-w-none sm:flex-row sm:items-center"
           >
             <motion.a
               href="#projects"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-primary flex items-center gap-2"
+              className="btn-primary flex items-center gap-2 justify-center w-full sm:w-auto"
             >
               <Eye size={20} />
               View Projects
@@ -95,7 +95,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-secondary flex items-center gap-2"
+              className="btn-secondary flex items-center gap-2 justify-center w-full sm:w-auto"
             >
               <Eye size={20} />
               View CV
@@ -118,7 +118,7 @@ const Hero = () => {
               href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-secondary flex items-center gap-2"
+              className="btn-secondary flex items-center gap-2 justify-center w-full sm:w-auto"
             >
               <Mail size={20} />
               Contact Me

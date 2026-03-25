@@ -35,7 +35,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold text-gray-900 dark:text-white mb-8"
+          className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 sm:mb-8"
         >
           Let's Connect
         </motion.h2>
@@ -45,7 +45,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="text-xl text-gray-600 dark:text-gray-300 mb-4"
+          className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-3 sm:mb-4"
         >
           Open to opportunities
         </motion.p>
@@ -55,12 +55,12 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="text-lg text-gray-600 dark:text-gray-300 mb-12"
+          className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 mb-8 sm:mb-12 px-4"
         >
           I'm always interested in discussing new opportunities, collaborations, or just having a chat about technology and innovation.
         </motion.p>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">
           {contactLinks.map((link, index) => {
             const IconComponent = link.icon;
             return (
@@ -74,12 +74,12 @@ const Contact = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all group"
+                className="bg-white dark:bg-gray-900 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all group"
               >
-                <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-primary-200 dark:group-hover:bg-primary-900/50 transition-colors">
-                  <IconComponent className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-100 dark:bg-primary-900/30 rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:bg-primary-200 dark:group-hover:bg-primary-900/50 transition-colors">
+                  <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-primary-600 dark:text-primary-400" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 ">
+                <h3 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white mb-2">
                   {link.label}
                 </h3>
                 <div className="flex flex-col gap-1">
@@ -90,7 +90,7 @@ const Contact = () => {
                         href={item.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm text-primary-600 dark:text-primary-400 hover:underline break-all"
+                        className="text-xs sm:text-sm text-primary-600 dark:text-primary-400 hover:underline break-all"
                       >
                         {item.name}
                       </a>
@@ -100,7 +100,7 @@ const Contact = () => {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-600 dark:text-gray-300 text-sm break-words"
+                      className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm break-words"
                     >
                       {link.value}
                     </a>
@@ -118,11 +118,10 @@ const Contact = () => {
           transition={{ delay: 0.5 }}
           className="border-t border-gray-200 dark:border-gray-700 pt-8"
         >
-          <p className="text-gray-600 dark:text-gray-300 flex items-center justify-center">
+          <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base text-center px-4">
             Ready to connect and collaborate on something amazing? Feel free to reach out!
-            {/* Built with <Heart className="w-4 h-4 text-red-500 mx-2" /> using React & Tailwind CSS */}
           </p>
-          <p className="text-gray-500 dark:text-gray-400 text-sm mt-2">
+          <p className="text-gray-500 dark:text-gray-400 text-xs sm:text-sm mt-2">
             © {new Date().getFullYear()} Catherine Natukunda. All rights reserved.
           </p>
         </motion.div>

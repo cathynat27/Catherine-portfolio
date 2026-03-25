@@ -14,11 +14,11 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 sm:mb-12 md:mb-16">
             About Me
           </h2>
           
-          <div className="prose prose-lg max-w-none text-gray-600 dark:text-gray-300">
+          <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none text-gray-600 dark:text-gray-300">
             {about.story.split('\n\n').map((paragraph, index) => (
               <motion.p
                 key={index}
@@ -26,7 +26,7 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="mb-6 text-lg leading-relaxed"
+                className="mb-4 sm:mb-6 text-sm sm:text-base md:text-lg leading-relaxed"
               >
                 {paragraph}
               </motion.p>

@@ -20,12 +20,12 @@ const Skills = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-16"
+          className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 sm:mb-12 md:mb-16"
         >
           Skills & Technologies
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
@@ -33,12 +33,12 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-              className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg"
+              className="bg-white dark:bg-gray-900 rounded-xl p-4 sm:p-6 shadow-lg"
             >
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4">
                 {category.title}
               </h3>
-              <div className="space-y-2">
+              <div className="space-y-1 sm:space-y-2">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.span
                     key={skill}
@@ -46,7 +46,7 @@ const Skills = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: (categoryIndex * 0.1) + (skillIndex * 0.05) }}
-                    className={`inline-block px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2 ${category.color}`}
+                    className={`inline-block px-2 py-1 sm:px-3 rounded-full text-xs sm:text-sm font-medium mr-1 sm:mr-2 mb-1 sm:mb-2 ${category.color}`}
                   >
                     {skill}
                   </motion.span>
